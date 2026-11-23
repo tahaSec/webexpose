@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webexpose"
+version = "0.1.0"
+description = "Quick security check for your own website: headers, exposed .git/.env files, TLS expiry, cookies, CORS. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Muhammed Taha Özer" }]
+keywords = ["security-headers", "web-security", "tls", "scanner", "devsecops", "owasp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+webexpose = "webexpose.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tahaSec/webexpose"
+Issues = "https://github.com/tahaSec/webexpose/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
