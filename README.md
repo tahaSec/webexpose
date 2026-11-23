@@ -1,4 +1,6 @@
-# webexpose
+<p align="center">
+  <img src="docs/banner.svg" alt="webexpose" width="100%">
+</p>
 
 **A one-command security check for your own website.** Headers, exposed
 `.git` / `.env` files, TLS expiry, cookies and CORS, with a grade from A+ to F
@@ -14,24 +16,9 @@ You deployed your portfolio, your side project or a client's shop. Did the
 certificate expire next week? `webexpose` answers that in a few seconds,
 with **zero dependencies**, on Linux, macOS and Windows.
 
-```console
-$ webexpose http://127.0.0.1:8099
-http://127.0.0.1:8099
-  final URL: http://127.0.0.1:8099/ (HTTP 200)
-  grade:  F   score 0/100
-
-  ✖ CRITICAL [exposure] Git repository exposed (/.git/)
-      fix: Block /.git in your web server config and never deploy the .git folder.
-  ✖ CRITICAL [exposure] .env file exposed (secrets!)
-      fix: Remove .env from the web root and ROTATE every secret inside it.
-  ✖ HIGH     [cors] CORS reflects any Origin with credentials
-  ✖ HIGH     [https] Site is served over plain HTTP
-  ! MEDIUM   [cookies] Cookie 'PHPSESSID': no HttpOnly, no SameSite
-      fix: Set-Cookie: PHPSESSID=...; Secure; HttpOnly; SameSite=Lax; Path=/
-  ! MEDIUM   [headers] Content-Security-Policy missing
-  ! LOW      [disclosure] X-Powered-By header reveals version: PHP/7.2.1
-  ...
-```
+<p align="center">
+  <img src="docs/demo.svg" alt="webexpose demo output" width="100%">
+</p>
 
 > Try it safely: `python examples/vulnerable_server.py` starts a deliberately
 > broken site on `127.0.0.1:8099`.

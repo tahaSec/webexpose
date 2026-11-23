@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3fb950"/><stop offset="1" stop-color="#3fb950" stop-opacity="0.55"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#30363d" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="200" rx="16" fill="url(#bg)"/>
+  <rect width="900" height="200" rx="16" fill="url(#grid)" opacity="0.45"/>
+  <g transform="translate(70,40)">
+    <path d="M60 0 L115 20 V62 C115 96 92 116 60 128 C28 116 5 96 5 62 V20 Z" fill="url(#ac)"/>
+    <path d="M60 14 L101 29 V62 C101 87 84 103 60 113 C36 103 19 87 19 62 V29 Z" fill="#0d1117" opacity="0.85"/>
+    <path d="M38 64 L54 80 L84 48" fill="none" stroke="#3fb950" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="225" y="98" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#f0f6fc">webexpose</text>
+  <text x="227" y="138" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#8b949e">One-command security check for your website</text>
+  <rect x="227" y="152" width="70" height="4" rx="2" fill="#3fb950"/>
+</svg>
